@@ -67,6 +67,7 @@ async function start() {
 
     const devServer = await startRenderer();
     rendererPort = devServer.config.server.port;
+    console.log("rendererPort: ",rendererPort)
 
     FileSystem.cpSync(Path.join(__dirname, '..', 'src', 'main', 'static'), Path.join(__dirname, '..', 'build', 'main', 'static'), { recursive: true });
 
